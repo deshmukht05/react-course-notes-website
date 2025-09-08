@@ -539,5 +539,38 @@
                 "text" : "The event starts from the target element and bubbles to the root of the DOM."
             }
         ]
+    },
+    {
+        "title" : "State in React.js",
+        "content" : [
+            {
+                "type" : "•",
+                "text" : "In React, state refers to an object that holds data or information about the component. State is managed within the component (just like variables declared in a function). However, unlike regular variables, when state changes, React re-renders the component to reflect these changes, keeping the user interface in sync with the data."
+            },
+            {
+                "type" : "•",
+                "text" : "State is dynamic and mutable, meaning it can change over time usually it response to user actions, server responses, or other events."
+            },
+            {
+                "type" : "•",
+                "text" : "React.js provides a function called 'useState'."
+            },
+            {
+                "type" : "•",
+                "text" : "This type of function which starts with 'use' is called hook."
+            },
+            {
+                "type" : "•",
+                "text" : "This is a special function which has some features provided by React.js."
+            },
+            {
+                "type" : "• Syntax:",
+                "text" : "const[count, setCount] = useState(0)"
+            },
+            {
+                "type" : "•",
+                "text" : "Here const is 'Variable(key)', count is 'State Variable(the current state value)', setCount is 'A function that updates the state variable', useState is 0 and 0 is 'the initial value of the state'."
+            }
+        ]
     }
 ]
