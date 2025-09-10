@@ -1,576 +1,657 @@
 [
-    {
-        "title" : "React Introduction",
-        "id" : "r1",
-        "content" : [
-            {
-                "type" : "1. ",
-                "text" : "React.js is a library of JavaScript use to design user interfaces (UI's) and Single Page Applications (SPA)."
-            },
-            {
-                "type" : "2. ",
-                "text" : "Created by Jordan Walke at Facebook."
-            },
-            {
-                "type" : "3. ",
-                "text" : "Most popular JavaScript library for frontend development."
-            },
-            {
-                "type" : "4. ",
-                "text" : "First time react used in 'News Feed' in Facebook."
-            },
-            {
-                "type" : "5. ",
-                "text" : "React is all about components."
-            },
-            {
-                "type" : "6. ",
-                "text" : "Every function is component in React."
-            }
-        ]
-    },
-    {
-      "title": "Why React?",
-      "id" : "r2",
-      "content": [
-        {
-          "type": "",
-          "text": "React is declarative because it describes what the UI should look like rather than how to achieve it. This makes the code easier to read and maintain, as it is more focused on end results rather than the steps involved in getting it."
-        }
-      ]
-    },
-    {
-        "title" : "Why React.js over Vanilla JavaScript?",
-        "content" : [
-            {
-                "type" :"1. ",
-                "text" : "Oppose to Vanilla JavaScript, React has a concept called components which combines all HTML, CSS and JavaScript by features instead of separating HTML, CSS and JavaScript completely."
-            },
-            {
-                "type" :"2. ",
-                "text" : "React.js manages updating the DOM or Document Object Model with the components written by us."
-            }
-        ]
-    },
-    {
-        "title" : "What is JSX?",
-        "id" : "r3",
-        "content" : [
-            {
-                "type" :"1. ",
-                "text" : "JSX stands for JavaScript XML. It allows you to write HTML elements in JavaScript and place them in the DOM without any createElement() and appendChild() methods."
-            },
-            {
-                "type":"2. ",
-                "text" : "Writing HTML code in JavaScript is JSX."
-            }
-        ]
-    },
-    {
-        "title" : "What are components?",
-        "id" : "r4",
-        "content" : [
-            {
-                "type" : "",
-                "text" : "In React, component is a function which returns your JSX code."
-            },
-            {
-                "type" :"",
-                "text" : "In React, a component is essentially a JavaScript function or class that returns JSX (JavaScript XML), a syntax extension that allows you to write HTML-like code inside JavaScript. Components are the building blocks of any React application, allowing for the creation of complex and interactive user interfaces through the assembly of isolated, reusable pieces."
-            },
-            {
-                "type" :"",
-                "text" : "You can also use .js extension with React.js components but it's recommended to use .jsx to differentiate between regular JavaScript Files and React.js components. There are two ways to create components in React.js:"
-            },
-            {
-                "type" : "1. ",
-                "text" : "Class Based Components: This is how components were created before functional components."
-            },
-            {
-                "type" :"2. ",
-                "text" : "Functional Components: This is modern and recommended way of writing React.js components."
-            }
-        ]
-    },
-    {
-        "title" : "What are Fragments or What is React.Fragments?",
-        "content" : [
-            {
-                "type" : "1. ",
-                "text" : "In React.js, a component can't return multiple elements without a wrapper div."
-            },
-            {
-                "type" :"2. ",
-                "text" : "You can do this to imitate it: Using an Array of Elements with Keys"
-            },
-            {
-                "type":"3. ",
-                "text": "return [<p>Ram</p>, <strong>20</strong>];"
-            },
-            {
-                "type":"4. ",
-                "text": "But it's tedious, to fix this React 16 introduced Fragments, which allow components to return multiple elements without adding extra nodes to the DOM."
-            },
-            {
-                "type":"5. ",
-                "text": "import { Fragment } from 'react'; return <Fragment>"
-            },
-            {
-                "type":"6. ",
-                "text" : "Alternatively, you can also use its shorthand syntax: <> </>"
-            }
-        ]
-    },
-    {
-        "title" : "Why can't we return multiple elements at the same time?",
-        "content" : [
-            {
-                "type" : "1. ",
-                "text" : "As after JSX is compiled it is converted to normal JavaScript object, you can't return multiple JavaScript object at the same time."
-            },
-            {
-                "type" :"2. ",
-                "text" : "return ( jsx(...), jsx(...) );"
-            }
-        ]
-    },
-    {
-        "title" : "Dynamic Values in JSX:",
-        "content" : [
-            {
-                "type" : "",
-                "text" : "You can add any variables of your component in JSX using {} syntax."
-            },
-            {
-                "type" : "Example:",
-                "text" : ""
-            },
-            {
-                "type" : "",
-                "text" : "function MyComponent(){"
-            },
-            {
-                "type" : "",
-                "text" : "const value;"
-            },
-            {
-                "type" : "",
-                "text" : "return <p>{value}</p>;"
-            },
-            {
-                "type" : "",
-                "text" : "}"
-            }
-        ]
-    },
-    {
-        "title" : "Conditional Values in JSX:",
-        "content" : [
-            {
-                "type" :"1. ",
-                "text" : "You can either return a JSX early or you can use ternary operators for conditionals in JSX."
-            },
-            {
-                "type" :"2. ",
-                "text" : "return <p> { age >= 18 ? 'Adult' : 'Minor' } </p>"
-            },
-            {
-                "type" :"3. ",
-                "text" : "return <p> { age >= 18 && 'You can vote' } </p>"
-            },
-            {
-                "type" :"4. ",
-                "text" : "return <p> { username || 'Guest' } </p>"
-            }
-        ]
-    },
-    {
-        "title" : "Import and Export in React",
-        "content" : [
-            {
-                "type" : "1. Default import and export",
-                "text" : ""
-            },
-            {
-                "type" : "• Default Export:",
-                "text" : "A file can have only one default export."
-            },
-            {
-                "type" : "• Default Import:",
-                "text" : "When importing a default export, you can name the import what ever you like."
-            },
-            {
-                "type" : "• Example:",
-                "text" : "import NetflixSeries from './components/NetflixSeries';"
-            },
-            {
-                "type" : "2. Named import and export",
-                "text" : ""
-            },
-            {
-                "type" : "• Named Export:",
-                "text" : "A file can have multiple named exports. Each named export must be explicitly exported."
-            },
-            {
-                "type" : "• Named Import:",
-                "text" : "When importing named exports, the import must match the exports name exactly. Named exports must be enclose in curly brackets."
-            },
-            {
-                "type" : "• Example:",
-                "text" : "import { Footer, Header } from './components/NetflixSeries';"
-            },
-            {
-                "type" : "3. Mixed import and export",
-                "text" : ""
-            },
-            {
-                "type" : "• Mixed Export:",
-                "text" : "A file can have both default and named exports."
-            },
-            {
-                "type" : "• Mixed Import:",
-                "text" : "When importing file write separately or combined file names."
-            },
-            {
-                "type" : "• Example:",
-                "text" : "import NetflixSeries, { Footer, Header } from './components/NetflixSeries';"
-            }
-        ]
-    },
-    {
-        "title" : "Looping in JSX",
-        "content" : [
-            {
-                "type" : "",
-                "text" : "We don't have for loops in JSX, so we have to use .map() method of arrays."
-            }
-        ]
-    },
-    {
-        "title" : "Props in JSX",
-        "content" : [
-            {
-                "type" : "1. ",
-                "text" : "React props(Properties) facilitate data transfer from parent to child components."
-            },
-            {
-                "type" :"2. ",
-                "text" : "Data flows unidirectionally, ensuring a clear direction of information in React application."
-            },
-            {
-                "type":"3. ",
-                "text" : "Props are immutable, that means child cannot modify data received from parent."
-            },
-            {
-                "type" :"4. ",
-                "text" : "Child components access props though their function parameters."
-            },
-            {
-                "type" :"5. ",
-                "text" : "You can also pass JSX as props to another component."
-            }
-        ]
-    },
-    {
-        "title" : "CSS Modules",
-        "content" : [
-            {
-                "type" : "1. ",
-                "text" : "Every time you import a CSS file in your react component, they are regarded as global CSS."
-            },
-            {
-                "type" :"2. ",
-                "text" : "CSS Modules helps you keep styles specific to the component they are used in."
-            },
-            {
-                "type" :"3. ",
-                "text" : "Each module encapsulates it styles, preventing unintended style conflicts with other modules."
-            },
-            {
-                "type" :"4. ",
-                "text" : "The class names is CSS modules are often automatically generated reducing the likelihood of naming clashes."
-            }
-        ]
-    },
-    {
-        "title" : "Rules to create CSS Modules",
-        "content" : [
-            {
-                "type" :"1. ",
-                "text" : "Name your CSS module with the '.module.css' or '.module.scss' extension."
-            },
-            {
-                "type" :"2. ",
-                "text" : "Import the CSS module file in your react component. Access class name as the properties of the imported styles object."
-            },
-            {
-                "type" :"3. ",
-                "text" : "Access class names as the properties of imported styles object."
-            },
-            {
-                "type" :"4. ",
-                "text" : "Combine multiple class names using template literals or the class library."
-            },
-            {
-                "type":"5. ",
-                "text" : "Dynamically apply class names based on component state or props."
-            }
-        ]
-    },
-    {
-        "title" : "CSS Modules - Important Note",
-        "content" : [
-            {
-                "type" :"1. ",
-                "text" : "When using CSS Modules, class names with hyphen can sometimes cause issue if accessed correctly. In CSS module, you need to use bracket notation for class name with hyphens."
-            },
-            {
-                "type" :"2. ",
-                "text" : "<div className = { styles[ 'card-content' ] }>"
-            }
-        ]
-    },
-    {
-        "title" : "Styled Components in React.js",
-        "content" : [
-            {
-                "type" : "",
-                "text" : "import styled from 'styled-components';"
-            },
-            {
-                "type" : "Method 1:",
-                "text" : ""
-            },
-            {
-                "type" : "",
-                "text" : "const Button = styled.button`"
-            },
-            {
-                "type" : "",
-                "text" : "color: grey; "
-            },
-            {
-                "type" : "",
-                "text" : "background-color: white;"
-            },
-            {
-                "type" : "",
-                "text" : "`;"
-            },
-            {
-                "type" : "Method 2:",
-                "text" : ""
-            },
-            {
-                "type" : "",
-                "text" : "const Button = styled.button({"
-            },
-            {
-                "type" : "",
-                "text" : "color: grey; "
-            },
-            {
-                "type" : "",
-                "text" : "background-color: white;"
-            },
-            {
-                "type" : "",
-                "text" : "});"
-            },
-            {
-                "type" : "",
-                "text" : "Here 'button' is tag name like 'a, li, p' tags."
-            }
-        ]
-    },
-    {
-        "title" : "Event Handling in React.js",
-        "content" : [
-            {
-                "type" : "",
-                "text" : "Event handling in React.js is the process of capturing and responding to user interactions, such as clicks, keystrokes, or form submissions, within a React application. Event handling in React follows a similar pattern to standard JavaScript event handling but with some key differences, such as using synthetic events for cross-browser compatibility and providing consistent event handling across different elements and browsers."
-            },
-            {
-                "type" : "• Function Components with Named Functions:",
-                "text" : "Remember how we haven't called this function, if you call this function here  then it will run without even clicking. You just need to pass reference and not call here."
-            },
-            {
-                "type" : "Example:",
-                "text" : "<button onClick={handleButtonClick}>Click Me</button>"
-            },
-            {
-                "type" : "•",
-                "text" : "In React, event handlers receive the event object as an argument by default. However, when you use an arrow function directly in the onClick attribute without passing the event explicitly, React doesn't pass the event object to your handler function. This is because the arrow function creates a new function and calls your handler without passing any arguments."
-            },
-            {
-                "type" : "Example:",
-                "text" : "<button onClick={(event) => handleButtonClick(event)}>Click Here</button>"
-            },
-            {
-                "type" : "• Inline Event Handlers:",
-                "text" : ""
-            },
-            {
-                "type" : "Example:",
-                "text" : "<button onClick={(event) => console.log(event)}>Inline Function</button>"
-            },
-            {
-                "type" :"• Function Components with Inline Arrow Functions:",
-                "text" : ""
-            },
-            {
-                "type" : "Example:",
-                "text" : "<button onClick={() => alert('Hey I am Here!')}>Inline Arr Function</button>"
-            },
-            {
-                "type" : "• Passing Arguments to Event Handlers:",
-                "text" : ""
-            },
-            {
-                "type" : "Example:",
-                "text" : "<button onClick={() => handleWelcomeButton('Tushar')}>Welcome 1</button>,"
-            },
-            {
-                "type" :"",
-                "text" : "<button onClick={() => handleWelcomeButton('Gauri')}>Welcome 2</button>"
-            }
-        ]
-    },
-    {
-        "title" : "What is SynthaticBaseEvent in React?",
-        "content" : [
-            {
-                "type" : "",
-                "text" : "When you handle events in React, like clicking a button or typing in an input box, React wrap native browser events in something called SyntheticEvent."
-            }
-        ]
-    },
-    {
-        "title" : "Parameter and Argument",
-        "content" : [
-            {
-                "type" : "1. ",
-                "text" : "<button onClick={() => handleWelcomeButton('Tushar')}>Welcome 1</button>"
-            },
-            {
-                "type" : "",
-                "text" : "Here when we are passing 'Tushar' to a function that is our argument."
-            },
-            {
-                "type" : "2. ",
-                "text" : "const handleWelcomeButton = (user) => {"
-            },
-            {
-                "type" : "",
-                "text" : "console.log(`Welcome ${user}.`);"
-            },
-            {
-                "type" : "",
-                "text" : "};"
-            },
-            {
-                "type" : "",
-                "text" : "Here 'user' is our parameter which will fetch the argument."
-            }
-        ]
-    },
-    {
-        "title" : "Passing Event Handlers as Props",
-        "content" : [
-            {
-                "type" : "",
-                "text" : "Passing event handlers as props in React.js is a common pattern used to allow child components to communicate with parent components. This pattern is useful in various scenarios, including:"
-            },
-            {
-                "type" :"1. ",
-                "text" : "Form Handling:"
-            },
-            {
-                "type" : "",
-                "text" : "Passing event handlers like onChange or onSubmit to form components allows the child components to update the form data and notify the parent component of changes."
-            },
-            {
-                "type" :"2. ",
-                "text" : "User Interaction:"
-            },
-            {
-                "type" : "",
-                "text" : "Event handlers like onClick can be passed to interactive elements (e.g., buttons, links) to trigger specific actions in the parent component, such as opening a modal or navigating to a different page."
-            },
-            {
-                "type" :"3. ",
-                "text" : "State Management:"
-            },
-            {
-                "type" : "",
-                "text" : "Event handlers can be used to update state in the parent component, which can then be passed down to child components as props to reflect the updated statement."
-            },
-            {
-                "type" :"4. ",
-                "text" : "Callback Functions:"
-            },
-            {
-                "type" : "",
-                "text" : "Event handlers can be used as callback functions to handle asynchronous operations or to update state based on the result of an operation."
-            }
-        ]
-    },
-    {
-        "title" : "Event Propagation",
-        "content" : [
-            {
-                "type" : "1. ",
-                "text" : "Event propagation refers to the process of how events propagate or travel through the DOM (Document Object Model) hierarchy."
-            },
-            {
-                "type" :"2. ",
-                "text" : "In JavaScript, there are two phases of event propagation, 'capturing phase' and 'bubbling phase'."
-            },
-            {
-                "type" : "Capturing Phase:",
-                "text" : "The event starts from the root of the DOM and goes down to the target. For example, if we click on any button and if there are some other event before the button, first they will show their output and then at last button will show output."
-            },
-            {
-                "type" : "Target Phase:",
-                "text" : "The event reaches the target element."
-            },
-            {
-                "type" : "Bubbling Phase:",
-                "text" : "The event starts from the target element and bubbles to the root of the DOM."
-            }
-        ]
-    },
-    {
-        "title" : "State in React.js",
-        "content" : [
-            {
-                "type" : "•",
-                "text" : "In React, state refers to an object that holds data or information about the component. State is managed within the component (just like variables declared in a function). However, unlike regular variables, when state changes, React re-renders the component to reflect these changes, keeping the user interface in sync with the data."
-            },
-            {
-                "type" : "•",
-                "text" : "State is dynamic and mutable, meaning it can change over time usually it response to user actions, server responses, or other events."
-            },
-            {
-                "type" : "•",
-                "text" : "React.js provides a function called 'useState'."
-            },
-            {
-                "type" : "•",
-                "text" : "This type of function which starts with 'use' is called hook."
-            },
-            {
-                "type" : "•",
-                "text" : "This is a special function which has some features provided by React.js."
-            },
-            {
-                "type" : "• Syntax:",
-                "text" : "const[count, setCount] = useState(0)"
-            },
-            {
-                "type" : "•",
-                "text" : "Here const is 'Variable(key)', count is 'State Variable(the current state value)', setCount is 'A function that updates the state variable', useState is 0 and 0 is 'the initial value of the state'."
-            }
-        ]
-    }
+  {
+    "title": "React Introduction",
+    "id": "r1",
+    "content": [
+      {
+        "type": "1. ",
+        "text": "React.js is a library of JavaScript use to design user interfaces (UI's) and Single Page Applications (SPA)."
+      },
+      {
+        "type": "2. ",
+        "text": "Created by Jordan Walke at Facebook."
+      },
+      {
+        "type": "3. ",
+        "text": "Most popular JavaScript library for frontend development."
+      },
+      {
+        "type": "4. ",
+        "text": "First time react used in 'News Feed' in Facebook."
+      },
+      {
+        "type": "5. ",
+        "text": "React is all about components."
+      },
+      {
+        "type": "6. ",
+        "text": "Every function is component in React."
+      }
+    ]
+  },
+  {
+    "title": "Why React?",
+    "id": "r2",
+    "content": [
+      {
+        "type": "",
+        "text": "React is declarative because it describes what the UI should look like rather than how to achieve it. This makes the code easier to read and maintain, as it is more focused on end results rather than the steps involved in getting it."
+      }
+    ]
+  },
+  {
+    "title": "Why React.js over Vanilla JavaScript?",
+    "content": [
+      {
+        "type": "1. ",
+        "text": "Oppose to Vanilla JavaScript, React has a concept called components which combines all HTML, CSS and JavaScript by features instead of separating HTML, CSS and JavaScript completely."
+      },
+      {
+        "type": "2. ",
+        "text": "React.js manages updating the DOM or Document Object Model with the components written by us."
+      }
+    ]
+  },
+  {
+    "title": "What is JSX?",
+    "id": "r3",
+    "content": [
+      {
+        "type": "1. ",
+        "text": "JSX stands for JavaScript XML. It allows you to write HTML elements in JavaScript and place them in the DOM without any createElement() and appendChild() methods."
+      },
+      {
+        "type": "2. ",
+        "text": "Writing HTML code in JavaScript is JSX."
+      }
+    ]
+  },
+  {
+    "title": "What are components?",
+    "id": "r4",
+    "content": [
+      {
+        "type": "",
+        "text": "In React, component is a function which returns your JSX code."
+      },
+      {
+        "type": "",
+        "text": "In React, a component is essentially a JavaScript function or class that returns JSX (JavaScript XML), a syntax extension that allows you to write HTML-like code inside JavaScript. Components are the building blocks of any React application, allowing for the creation of complex and interactive user interfaces through the assembly of isolated, reusable pieces."
+      },
+      {
+        "type": "",
+        "text": "You can also use .js extension with React.js components but it's recommended to use .jsx to differentiate between regular JavaScript Files and React.js components. There are two ways to create components in React.js:"
+      },
+      {
+        "type": "1. ",
+        "text": "Class Based Components: This is how components were created before functional components."
+      },
+      {
+        "type": "2. ",
+        "text": "Functional Components: This is modern and recommended way of writing React.js components."
+      }
+    ]
+  },
+  {
+    "title": "What are Fragments or What is React.Fragments?",
+    "content": [
+      {
+        "type": "1. ",
+        "text": "In React.js, a component can't return multiple elements without a wrapper div."
+      },
+      {
+        "type": "2. ",
+        "text": "You can do this to imitate it: Using an Array of Elements with Keys"
+      },
+      {
+        "type": "3. ",
+        "text": "return [<p>Ram</p>, <strong>20</strong>];"
+      },
+      {
+        "type": "4. ",
+        "text": "But it's tedious, to fix this React 16 introduced Fragments, which allow components to return multiple elements without adding extra nodes to the DOM."
+      },
+      {
+        "type": "5. ",
+        "text": "import { Fragment } from 'react'; return <Fragment>"
+      },
+      {
+        "type": "6. ",
+        "text": "Alternatively, you can also use its shorthand syntax: <> </>"
+      }
+    ]
+  },
+  {
+    "title": "Why can't we return multiple elements at the same time?",
+    "content": [
+      {
+        "type": "1. ",
+        "text": "As after JSX is compiled it is converted to normal JavaScript object, you can't return multiple JavaScript object at the same time."
+      },
+      {
+        "type": "2. ",
+        "text": "return ( jsx(...), jsx(...) );"
+      }
+    ]
+  },
+  {
+    "title": "Dynamic Values in JSX:",
+    "content": [
+      {
+        "type": "",
+        "text": "You can add any variables of your component in JSX using {} syntax."
+      },
+      {
+        "type": "Example:",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": "function MyComponent(){"
+      },
+      {
+        "type": "",
+        "text": "const value;"
+      },
+      {
+        "type": "",
+        "text": "return <p>{value}</p>;"
+      },
+      {
+        "type": "",
+        "text": "}"
+      }
+    ]
+  },
+  {
+    "title": "Conditional Values in JSX:",
+    "content": [
+      {
+        "type": "1. ",
+        "text": "You can either return a JSX early or you can use ternary operators for conditionals in JSX."
+      },
+      {
+        "type": "2. ",
+        "text": "return <p> { age >= 18 ? 'Adult' : 'Minor' } </p>"
+      },
+      {
+        "type": "3. ",
+        "text": "return <p> { age >= 18 && 'You can vote' } </p>"
+      },
+      {
+        "type": "4. ",
+        "text": "return <p> { username || 'Guest' } </p>"
+      }
+    ]
+  },
+  {
+    "title": "Import and Export in React",
+    "content": [
+      {
+        "type": "1. Default import and export",
+        "text": ""
+      },
+      {
+        "type": "• Default Export:",
+        "text": "A file can have only one default export."
+      },
+      {
+        "type": "• Default Import:",
+        "text": "When importing a default export, you can name the import what ever you like."
+      },
+      {
+        "type": "• Example:",
+        "text": "import NetflixSeries from './components/NetflixSeries';"
+      },
+      {
+        "type": "2. Named import and export",
+        "text": ""
+      },
+      {
+        "type": "• Named Export:",
+        "text": "A file can have multiple named exports. Each named export must be explicitly exported."
+      },
+      {
+        "type": "• Named Import:",
+        "text": "When importing named exports, the import must match the exports name exactly. Named exports must be enclose in curly brackets."
+      },
+      {
+        "type": "• Example:",
+        "text": "import { Footer, Header } from './components/NetflixSeries';"
+      },
+      {
+        "type": "3. Mixed import and export",
+        "text": ""
+      },
+      {
+        "type": "• Mixed Export:",
+        "text": "A file can have both default and named exports."
+      },
+      {
+        "type": "• Mixed Import:",
+        "text": "When importing file write separately or combined file names."
+      },
+      {
+        "type": "• Example:",
+        "text": "import NetflixSeries, { Footer, Header } from './components/NetflixSeries';"
+      }
+    ]
+  },
+  {
+    "title": "Looping in JSX",
+    "content": [
+      {
+        "type": "",
+        "text": "We don't have for loops in JSX, so we have to use .map() method of arrays."
+      }
+    ]
+  },
+  {
+    "title": "Props in JSX",
+    "content": [
+      {
+        "type": "1. ",
+        "text": "React props(Properties) facilitate data transfer from parent to child components."
+      },
+      {
+        "type": "2. ",
+        "text": "Data flows unidirectionally, ensuring a clear direction of information in React application."
+      },
+      {
+        "type": "3. ",
+        "text": "Props are immutable, that means child cannot modify data received from parent."
+      },
+      {
+        "type": "4. ",
+        "text": "Child components access props though their function parameters."
+      },
+      {
+        "type": "5. ",
+        "text": "You can also pass JSX as props to another component."
+      }
+    ]
+  },
+  {
+    "title": "CSS Modules",
+    "content": [
+      {
+        "type": "1. ",
+        "text": "Every time you import a CSS file in your react component, they are regarded as global CSS."
+      },
+      {
+        "type": "2. ",
+        "text": "CSS Modules helps you keep styles specific to the component they are used in."
+      },
+      {
+        "type": "3. ",
+        "text": "Each module encapsulates it styles, preventing unintended style conflicts with other modules."
+      },
+      {
+        "type": "4. ",
+        "text": "The class names is CSS modules are often automatically generated reducing the likelihood of naming clashes."
+      }
+    ]
+  },
+  {
+    "title": "Rules to create CSS Modules",
+    "content": [
+      {
+        "type": "1. ",
+        "text": "Name your CSS module with the '.module.css' or '.module.scss' extension."
+      },
+      {
+        "type": "2. ",
+        "text": "Import the CSS module file in your react component. Access class name as the properties of the imported styles object."
+      },
+      {
+        "type": "3. ",
+        "text": "Access class names as the properties of imported styles object."
+      },
+      {
+        "type": "4. ",
+        "text": "Combine multiple class names using template literals or the class library."
+      },
+      {
+        "type": "5. ",
+        "text": "Dynamically apply class names based on component state or props."
+      }
+    ]
+  },
+  {
+    "title": "CSS Modules - Important Note",
+    "content": [
+      {
+        "type": "1. ",
+        "text": "When using CSS Modules, class names with hyphen can sometimes cause issue if accessed correctly. In CSS module, you need to use bracket notation for class name with hyphens."
+      },
+      {
+        "type": "2. ",
+        "text": "<div className = { styles[ 'card-content' ] }>"
+      }
+    ]
+  },
+  {
+    "title": "Styled Components in React.js",
+    "content": [
+      {
+        "type": "",
+        "text": "import styled from 'styled-components';"
+      },
+      {
+        "type": "Method 1:",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": "const Button = styled.button`"
+      },
+      {
+        "type": "",
+        "text": "color: grey; "
+      },
+      {
+        "type": "",
+        "text": "background-color: white;"
+      },
+      {
+        "type": "",
+        "text": "`;"
+      },
+      {
+        "type": "Method 2:",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": "const Button = styled.button({"
+      },
+      {
+        "type": "",
+        "text": "color: grey; "
+      },
+      {
+        "type": "",
+        "text": "background-color: white;"
+      },
+      {
+        "type": "",
+        "text": "});"
+      },
+      {
+        "type": "",
+        "text": "Here 'button' is tag name like 'a, li, p' tags."
+      }
+    ]
+  },
+  {
+    "title": "Event Handling in React.js",
+    "content": [
+      {
+        "type": "",
+        "text": "Event handling in React.js is the process of capturing and responding to user interactions, such as clicks, keystrokes, or form submissions, within a React application. Event handling in React follows a similar pattern to standard JavaScript event handling but with some key differences, such as using synthetic events for cross-browser compatibility and providing consistent event handling across different elements and browsers."
+      },
+      {
+        "type": "• Function Components with Named Functions:",
+        "text": "Remember how we haven't called this function, if you call this function here  then it will run without even clicking. You just need to pass reference and not call here."
+      },
+      {
+        "type": "Example:",
+        "text": "<button onClick={handleButtonClick}>Click Me</button>"
+      },
+      {
+        "type": "•",
+        "text": "In React, event handlers receive the event object as an argument by default. However, when you use an arrow function directly in the onClick attribute without passing the event explicitly, React doesn't pass the event object to your handler function. This is because the arrow function creates a new function and calls your handler without passing any arguments."
+      },
+      {
+        "type": "Example:",
+        "text": "<button onClick={(event) => handleButtonClick(event)}>Click Here</button>"
+      },
+      {
+        "type": "• Inline Event Handlers:",
+        "text": ""
+      },
+      {
+        "type": "Example:",
+        "text": "<button onClick={(event) => console.log(event)}>Inline Function</button>"
+      },
+      {
+        "type": "• Function Components with Inline Arrow Functions:",
+        "text": ""
+      },
+      {
+        "type": "Example:",
+        "text": "<button onClick={() => alert('Hey I am Here!')}>Inline Arr Function</button>"
+      },
+      {
+        "type": "• Passing Arguments to Event Handlers:",
+        "text": ""
+      },
+      {
+        "type": "Example:",
+        "text": "<button onClick={() => handleWelcomeButton('Tushar')}>Welcome 1</button>,"
+      },
+      {
+        "type": "",
+        "text": "<button onClick={() => handleWelcomeButton('Gauri')}>Welcome 2</button>"
+      }
+    ]
+  },
+  {
+    "title": "What is SynthaticBaseEvent in React?",
+    "content": [
+      {
+        "type": "",
+        "text": "When you handle events in React, like clicking a button or typing in an input box, React wrap native browser events in something called SyntheticEvent."
+      }
+    ]
+  },
+  {
+    "title": "Parameter and Argument",
+    "content": [
+      {
+        "type": "1. ",
+        "text": "<button onClick={() => handleWelcomeButton('Tushar')}>Welcome 1</button>"
+      },
+      {
+        "type": "",
+        "text": "Here when we are passing 'Tushar' to a function that is our argument."
+      },
+      {
+        "type": "2. ",
+        "text": "const handleWelcomeButton = (user) => {"
+      },
+      {
+        "type": "",
+        "text": "console.log(`Welcome ${user}.`);"
+      },
+      {
+        "type": "",
+        "text": "};"
+      },
+      {
+        "type": "",
+        "text": "Here 'user' is our parameter which will fetch the argument."
+      }
+    ]
+  },
+  {
+    "title": "Passing Event Handlers as Props",
+    "content": [
+      {
+        "type": "",
+        "text": "Passing event handlers as props in React.js is a common pattern used to allow child components to communicate with parent components. This pattern is useful in various scenarios, including:"
+      },
+      {
+        "type": "1. ",
+        "text": "Form Handling:"
+      },
+      {
+        "type": "",
+        "text": "Passing event handlers like onChange or onSubmit to form components allows the child components to update the form data and notify the parent component of changes."
+      },
+      {
+        "type": "2. ",
+        "text": "User Interaction:"
+      },
+      {
+        "type": "",
+        "text": "Event handlers like onClick can be passed to interactive elements (e.g., buttons, links) to trigger specific actions in the parent component, such as opening a modal or navigating to a different page."
+      },
+      {
+        "type": "3. ",
+        "text": "State Management:"
+      },
+      {
+        "type": "",
+        "text": "Event handlers can be used to update state in the parent component, which can then be passed down to child components as props to reflect the updated statement."
+      },
+      {
+        "type": "4. ",
+        "text": "Callback Functions:"
+      },
+      {
+        "type": "",
+        "text": "Event handlers can be used as callback functions to handle asynchronous operations or to update state based on the result of an operation."
+      }
+    ]
+  },
+  {
+    "title": "Event Propagation",
+    "content": [
+      {
+        "type": "1. ",
+        "text": "Event propagation refers to the process of how events propagate or travel through the DOM (Document Object Model) hierarchy."
+      },
+      {
+        "type": "2. ",
+        "text": "In JavaScript, there are two phases of event propagation, 'capturing phase' and 'bubbling phase'."
+      },
+      {
+        "type": "Capturing Phase:",
+        "text": "The event starts from the root of the DOM and goes down to the target. For example, if we click on any button and if there are some other event before the button, first they will show their output and then at last button will show output."
+      },
+      {
+        "type": "Target Phase:",
+        "text": "The event reaches the target element."
+      },
+      {
+        "type": "Bubbling Phase:",
+        "text": "The event starts from the target element and bubbles to the root of the DOM."
+      }
+    ]
+  },
+  {
+    "title": "State in React.js",
+    "content": [
+      {
+        "type": "•",
+        "text": "In React, state refers to an object that holds data or information about the component. State is managed within the component (just like variables declared in a function). However, unlike regular variables, when state changes, React re-renders the component to reflect these changes, keeping the user interface in sync with the data."
+      },
+      {
+        "type": "•",
+        "text": "State is dynamic and mutable, meaning it can change over time usually it response to user actions, server responses, or other events."
+      },
+      {
+        "type": "•",
+        "text": "React.js provides a function called 'useState'."
+      },
+      {
+        "type": "•",
+        "text": "This type of function which starts with 'use' is called hook."
+      },
+      {
+        "type": "•",
+        "text": "This is a special function which has some features provided by React.js."
+      },
+      {
+        "type": "• Syntax:",
+        "text": "const[count, setCount] = useState(0)"
+      },
+      {
+        "type": "•",
+        "text": "Here const is 'Variable(key)', count is 'State Variable(the current state value)', setCount is 'A function that updates the state variable', useState is 0 and 0 is 'the initial value of the state'."
+      }
+    ]
+  },
+  {
+    "title": "How State Works?",
+    "content": [
+      {
+        "type": "1.",
+        "text": "In React, state is a way to store and manage data that can change over the lifetime of a component. When state changes, React re-renders the component to reflect the new state. This ensures that the user interface stays in sync with the underlying data."
+      },
+      {
+        "type": "2. ",
+        "text": "React reconciliation is the process through which React updates the Browser DOM."
+      },
+      {
+        "type": "3. ",
+        "text": "The Diffing Algorithm: Diffing short for Differences Algorithm is used to differentiate the DOM Tree for efficient updates."
+      },
+      {
+        "type": "4. Note: ",
+        "text": "When React.js creates a new tree, it will re-run or re-render the affected component and all its children. So, in this case it will re-run our <Counter /> component, it won't re-render other components outside."
+      },
+      {
+        "type": "• Example:",
+        "text": "function App() {"
+      },
+      {
+        "type": "",
+        "text": "return ("
+      },
+      {
+        "type": "",
+        "text": "<div>"
+      },
+      {
+        "type": "",
+        "text": "<ParentComponent>"
+      },
+      {
+        "type": "",
+        "text": "<ChildComponent>"
+      },
+      {
+        "type" : "",
+        "text" : "<AnotherChildComponent>"
+      },
+      {
+        "type" : "",
+        "text" : "</ParentComponent>"
+      },
+      {
+        "type" : "",
+        "text" : "<SiblingComponent />"
+      },
+      {
+        "type" : "",
+        "text" : "</div>"
+      },
+      {
+        "type" : "",
+        "text" : ");"
+      },
+      {
+        "type" : "",
+        "text" : "}"
+      },
+      {
+        "type"  : "• Here's how the rendering works:",
+        "text" : ""
+      },
+      {
+        "type" : "1. Initial Render: ",
+        "text" : "When the App component first renders, React renders ParentComponent, ChildComponent, AnotherChildComponent, and SiblingComponent."
+      },
+      {
+        "type" : "2. State Change in ParentComponent: ",
+        "text" : "Suppose there is a state change in ParentComponent. React will re-render ParentComponent and all its children (ChildComponent and AnotherChildComponent)."
+      },
+      {
+        "type" : "3. Components Outside: ",
+        "text" : "Sibling component is not affected by the state change in ParentComponent. Therefore, it will not be re-rendered."
+      }
+    ]
+  }
 ]
