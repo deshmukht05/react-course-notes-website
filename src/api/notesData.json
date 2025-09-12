@@ -674,7 +674,7 @@
     ]
   },
   {
-    "title" : "Why the state value does not reset to its initial value n re-render?",
+    "title" : "Why the state value does not reset to its initial value and re-render?",
     "id": "r24",
     "content" : [
       {
@@ -704,6 +704,43 @@
       {
         "type" : "'The useState hook is smart enough to only use the initial value the very first time the component renders.'",
         "text" : ""
+      }
+    ]
+  },
+  {
+    "title" : "What is derived state in React?",
+    "content" : [
+      {
+        "type" : "",
+        "text" : "Derived state is any state that can be computed based on other state or props. It is not stored directly in the componentis state but is calculated when needed. This approach helps avoid duplication and keeps the state simpler and more manageable."
+      },
+      {
+        "type" : "Example:",
+        "text" : ""
+      },
+      {
+        "type" : "",
+        "text" : "const userCount = users.length;"
+      },
+      {
+        "type" : "",
+        "text" : "const averageAge = (user.reduce((accum, currElem) => accum + currElem.age, 0)/userCount);"
+      },
+      {
+        "type" : "Benefits if derived state:",
+        "text" : ""
+      },
+      {
+        "type" : "• Avoid Redundancy:",
+        "text" : "By deriving values from existing state, you avoid storing redundant data."
+      },
+      {
+        "type" : "• Consistency:",
+        "text" : "Ensures that derived values are always in sync with the underlying state props."
+      },
+      {
+        "type" : "• Simplicity:",
+        "text" : "Reduces the complexity of state management by minimizing the numerical state variables."
       }
     ]
   }
