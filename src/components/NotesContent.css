@@ -2,7 +2,8 @@
 .content {
   padding: 0;
   list-style-type: none;
-  margin-left: -38px;
+  margin-left: -30px;
+  margin-right: 10px;
   margin-bottom: 14px;
   border: 1px solid #000;
   border-radius: 10px;
@@ -14,7 +15,7 @@
 /* Styling the title */
 .content h3 {
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: royalblue;
   margin: 0;
   padding: 10px 14px;
