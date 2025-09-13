@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import './NotesContent.css'; // Import the CSS file
+import './NotesContent.css';
 
 export const NotesContent = ({ data }) => {
   const { title, content } = data;
