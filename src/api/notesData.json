@@ -776,5 +776,146 @@
         "text" : "For updating state of parent from children, you can pass a function that updates the state from parent to child as props, then child will update it."
       }
     ]
+  },
+  {
+    "title" : "Keys in React.js",
+    "content" : [
+      {
+        "type" : "•",
+        "text" : "A string or a number that uniquely identifies it among other items in that array."
+      },
+      {
+        "type" : "•",
+        "text" : "Keys tell React which array item each component corresponds to, so that it can match them up later. This becomes important if your array items can move (e.g. due to sorting), get inserted, or get deleted."
+      },
+      {
+        "type" : "Rules:",
+        "text" : ""
+      },
+      {
+        "type" : "1. ",
+        "text" : "Keys must be unique among siblings."
+      },
+      {
+        "type" : "2. ",
+        "text" : "Keys must not change."
+      }
+    ]
+  },
+  {
+    "title" : "Short Circuit Evaluation in React.js",
+    "content" : [
+      {
+        "type" : "",
+        "text" : " Short circuit evaluation is a technique used in JavaScript (and many other programming languages) where expressions are evaluated from left to right. In logical operations, evaluation stops as soon as the result is determined. This is often used in React to conditionally render components or execute code based on the truthiness of certain conditions."
+      },
+      {
+        "type" : "Rules of Short Circuit Evaluation:",
+        "text" : ""
+      },
+      {
+        "type" : "",
+        "text" : "Short circuit evaluation involves logical operators (&&, ||, ??) and how they evaluate expressions based on the truthiness of their operands."
+      },
+      {
+        "type" : "• Logical OR (||):"
+      },
+      {
+        "type" : "Syntax:",
+        "text" : "expression1 || expression2"
+      },
+      {
+        "type" : "Rule:",
+        "text" : "If expression1 is truthy, return expression1. Otherwise, return expression2."
+      },
+      {
+        "type" : "Example:",
+        "text" : "const result = false || 'Hello'; //'Hello'"
+      },
+      {
+        "text" : "const result = true || 'World'; //true"
+      },
+      {
+        "type" : "• Logical AND (&&):"
+      },
+      {
+        "type" : "Syntax:",
+        "text" : "expression1 && expression2"
+      },
+      {
+        "type" : "Rule:",
+        "text" : "If expression1 is falsy, return expression1. Otherwise, return expression2."
+      },
+      {
+        "type" : "Example:",
+        "text" : "const result = true && 'Hello'; //'Hello'"
+      },
+      {
+        "text" : "const result = false && 'World'; //false"
+      },
+      {
+        "type" : "• Nullish Coalescing (??):"
+      },
+      {
+        "type" : "Syntax:",
+        "text" : "expression1 ?? expression2"
+      },
+      {
+        "type" : "Rule:",
+        "text" : "If expression1 is not null or undefined, return expression1. Otherwise, return expression2."
+      },
+      {
+        "type" : "Example:",
+        "text" : "const result = null ?? 'Hello'; //'Hello'"
+      },
+      {
+        "text" : "const result = undefined ?? 'World'; //'World'"
+      },
+      {
+        "text" : "const result = '' ?? 'Fallback'; //''"
+      }
+    ]
+  },
+  {
+    "title" : "List of React Hooks",
+    "content" : [
+      {
+        "type" : "",
+        "text" : "useState, useEffect, useContext, useReducer, useCallback, useMemo, useRef, useLayoutEffect, useDebugValue, useImperativeHandle"
+      }
+    ]
+  },
+  {
+    "title" : "React Hooks Rules",
+    "content" : [
+      {
+        "type" : "•",
+        "text" : "Hooks let you use different React features from your components."
+      },
+      {
+        "type" : "•",
+        "text" : "It starts with use___. (useState, useEffect, useReducer)"
+      },
+      {
+        "type" : "•",
+        "text" : "Hooks can only be used on the top level of your component."
+      },
+      {
+        "type" : "•",
+        "text" : "Do not call Hooks inside loops, conditions or nested functions."
+      },
+      {
+        "type" : "•",
+        "text" : "Call Hooks only from React function components or custom Hook. Do not call Hooks from regular JavaScript functions or Class components."
+      },
+      {
+        "type" : "•",
+        "text" : "You cab also create your own custom Hooks by creating functions starting with use____ this ensures that React can identify it as Hook. (ex. useFetch, useForm)"
+      },
+      {
+        "type" : "•",
+        "text" : "Ensure Hooks are called in the same order."
+      }
+    ]
   }
 ]
