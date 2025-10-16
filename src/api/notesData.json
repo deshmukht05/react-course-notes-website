@@ -632,289 +632,512 @@
         "text": "<ChildComponent>"
       },
       {
-        "type" : "",
-        "text" : "<AnotherChildComponent>"
-      },
-      {
-        "type" : "",
-        "text" : "</ParentComponent>"
-      },
-      {
-        "type" : "",
-        "text" : "<SiblingComponent />"
-      },
-      {
-        "type" : "",
-        "text" : "</div>"
-      },
-      {
-        "type" : "",
-        "text" : ");"
-      },
-      {
-        "type" : "",
-        "text" : "}"
-      },
-      {
-        "type"  : "• Here's how the rendering works:",
-        "text" : ""
-      },
-      {
-        "type" : "1. Initial Render: ",
-        "text" : "When the App component first renders, React renders ParentComponent, ChildComponent, AnotherChildComponent, and SiblingComponent."
-      },
-      {
-        "type" : "2. State Change in ParentComponent: ",
-        "text" : "Suppose there is a state change in ParentComponent. React will re-render ParentComponent and all its children (ChildComponent and AnotherChildComponent)."
-      },
-      {
-        "type" : "3. Components Outside: ",
-        "text" : "Sibling component is not affected by the state change in ParentComponent. Therefore, it will not be re-rendered."
-      }
-    ]
-  },
-  {
-    "title" : "Why the state value does not reset to its initial value and re-render?",
-    "id": "r24",
-    "content" : [
-      {
-        "type" : "1. First Render:",
-        "text" : "const[count, setCount] = useState(0);"
-      },
-      {
-        "type" : "",
-        "text" : "count is initialized as 0."
-      },
-      {
-        "type" : "2. Button Click:",
-        "text" : "Increment function is called."
+        "type": "",
+        "text": "<AnotherChildComponent>"
       },
       {
         "type": "",
-        "text" : "setCount(count + 1) updated count to 1."
+        "text": "</ParentComponent>"
       },
       {
-        "type" : "3. Re-render:",
-        "text" : "React re-renders the component. When user click the button for the 2nd time"
+        "type": "",
+        "text": "<SiblingComponent />"
       },
       {
-        "type" : "",
-        "text" : "const[count, setCount] = useState(0); sees that count is now 1 and uses 1 as the current state."
+        "type": "",
+        "text": "</div>"
       },
       {
-        "type" : "'The useState hook is smart enough to only use the initial value the very first time the component renders.'",
-        "text" : ""
+        "type": "",
+        "text": ");"
+      },
+      {
+        "type": "",
+        "text": "}"
+      },
+      {
+        "type": "• Here's how the rendering works:",
+        "text": ""
+      },
+      {
+        "type": "1. Initial Render: ",
+        "text": "When the App component first renders, React renders ParentComponent, ChildComponent, AnotherChildComponent, and SiblingComponent."
+      },
+      {
+        "type": "2. State Change in ParentComponent: ",
+        "text": "Suppose there is a state change in ParentComponent. React will re-render ParentComponent and all its children (ChildComponent and AnotherChildComponent)."
+      },
+      {
+        "type": "3. Components Outside: ",
+        "text": "Sibling component is not affected by the state change in ParentComponent. Therefore, it will not be re-rendered."
       }
     ]
   },
   {
-    "title" : "What is derived state in React?",
-    "content" : [
+    "title": "Why the state value does not reset to its initial value and re-render?",
+    "id": "r24",
+    "content": [
       {
-        "type" : "",
-        "text" : "Derived state is any state that can be computed based on other state or props. It is not stored directly in the componentis state but is calculated when needed. This approach helps avoid duplication and keeps the state simpler and more manageable."
+        "type": "1. First Render:",
+        "text": "const[count, setCount] = useState(0);"
       },
       {
-        "type" : "Example:",
-        "text" : ""
+        "type": "",
+        "text": "count is initialized as 0."
       },
       {
-        "type" : "",
-        "text" : "const userCount = users.length;"
+        "type": "2. Button Click:",
+        "text": "Increment function is called."
       },
       {
-        "type" : "",
-        "text" : "const averageAge = (user.reduce((accum, currElem) => accum + currElem.age, 0)/userCount);"
+        "type": "",
+        "text": "setCount(count + 1) updated count to 1."
       },
       {
-        "type" : "Benefits if derived state:",
-        "text" : ""
+        "type": "3. Re-render:",
+        "text": "React re-renders the component. When user click the button for the 2nd time"
       },
       {
-        "type" : "• Avoid Redundancy:",
-        "text" : "By deriving values from existing state, you avoid storing redundant data."
+        "type": "",
+        "text": "const[count, setCount] = useState(0); sees that count is now 1 and uses 1 as the current state."
       },
       {
-        "type" : "• Consistency:",
-        "text" : "Ensures that derived values are always in sync with the underlying state props."
-      },
-      {
-        "type" : "• Simplicity:",
-        "text" : "Reduces the complexity of state management by minimizing the numerical state variables."
+        "type": "'The useState hook is smart enough to only use the initial value the very first time the component renders.'",
+        "text": ""
       }
     ]
   },
   {
-    "title" : "Lifting State Up in React",
-    "content" : [
+    "title": "What is derived state in React?",
+    "content": [
       {
-        "type" : "Lifting State Up",
-        "text" : "is a pattern in React where you move the state from child components to a common parent component so that multiple child components can share and synchronize this state. This ensures that the state is managed at a higher level in the component hierarchy, allowing data to flow down as props and actions (such as events) to flow up."
+        "type": "",
+        "text": "Derived state is any state that can be computed based on other state or props. It is not stored directly in the componentis state but is calculated when needed. This approach helps avoid duplication and keeps the state simpler and more manageable."
       },
       {
-        "type" : "Use Case:",
-        "text" : ""
+        "type": "Example:",
+        "text": ""
       },
       {
-        "type" : "",
-        "text" : "When you have two or more components that need to share the same state, you should lift the state up to their nearest common ancestor. This allows these components to stay in sync and ensures that the state is managed in a single place."
+        "type": "",
+        "text": "const userCount = users.length;"
       },
       {
-        "type" : "Updating parent state from child and vice-versa:",
-        "text" : ""
+        "type": "",
+        "text": "const averageAge = (user.reduce((accum, currElem) => accum + currElem.age, 0)/userCount);"
       },
       {
-        "type" : "•",
-        "text" : "For updating state of children from parent, you can use concept called Lifting the state up."
+        "type": "Benefits if derived state:",
+        "text": ""
       },
       {
-        "type" : "•",
-        "text" : "Here, you will lift the state from child to parent then pass that state down using props."
+        "type": "• Avoid Redundancy:",
+        "text": "By deriving values from existing state, you avoid storing redundant data."
       },
       {
-        "type" : "•",
-        "text" : "For updating state of parent from children, you can pass a function that updates the state from parent to child as props, then child will update it."
+        "type": "• Consistency:",
+        "text": "Ensures that derived values are always in sync with the underlying state props."
+      },
+      {
+        "type": "• Simplicity:",
+        "text": "Reduces the complexity of state management by minimizing the numerical state variables."
       }
     ]
   },
   {
-    "title" : "Keys in React.js",
-    "content" : [
+    "title": "Lifting State Up in React",
+    "content": [
       {
-        "type" : "•",
-        "text" : "A string or a number that uniquely identifies it among other items in that array."
+        "type": "Lifting State Up",
+        "text": "is a pattern in React where you move the state from child components to a common parent component so that multiple child components can share and synchronize this state. This ensures that the state is managed at a higher level in the component hierarchy, allowing data to flow down as props and actions (such as events) to flow up."
       },
       {
-        "type" : "•",
-        "text" : "Keys tell React which array item each component corresponds to, so that it can match them up later. This becomes important if your array items can move (e.g. due to sorting), get inserted, or get deleted."
+        "type": "Use Case:",
+        "text": ""
       },
       {
-        "type" : "Rules:",
-        "text" : ""
+        "type": "",
+        "text": "When you have two or more components that need to share the same state, you should lift the state up to their nearest common ancestor. This allows these components to stay in sync and ensures that the state is managed in a single place."
       },
       {
-        "type" : "1. ",
-        "text" : "Keys must be unique among siblings."
+        "type": "Updating parent state from child and vice-versa:",
+        "text": ""
       },
       {
-        "type" : "2. ",
-        "text" : "Keys must not change."
+        "type": "•",
+        "text": "For updating state of children from parent, you can use concept called Lifting the state up."
+      },
+      {
+        "type": "•",
+        "text": "Here, you will lift the state from child to parent then pass that state down using props."
+      },
+      {
+        "type": "•",
+        "text": "For updating state of parent from children, you can pass a function that updates the state from parent to child as props, then child will update it."
       }
     ]
   },
   {
-    "title" : "Short Circuit Evaluation in React.js",
-    "content" : [
+    "title": "Keys in React.js",
+    "content": [
       {
-        "type" : "",
-        "text" : " Short circuit evaluation is a technique used in JavaScript (and many other programming languages) where expressions are evaluated from left to right. In logical operations, evaluation stops as soon as the result is determined. This is often used in React to conditionally render components or execute code based on the truthiness of certain conditions."
+        "type": "•",
+        "text": "A string or a number that uniquely identifies it among other items in that array."
       },
       {
-        "type" : "Rules of Short Circuit Evaluation:",
-        "text" : ""
+        "type": "•",
+        "text": "Keys tell React which array item each component corresponds to, so that it can match them up later. This becomes important if your array items can move (e.g. due to sorting), get inserted, or get deleted."
       },
       {
-        "type" : "",
-        "text" : "Short circuit evaluation involves logical operators (&&, ||, ??) and how they evaluate expressions based on the truthiness of their operands."
+        "type": "Rules:",
+        "text": ""
       },
       {
-        "type" : "• Logical OR (||):"
+        "type": "1. ",
+        "text": "Keys must be unique among siblings."
       },
       {
-        "type" : "Syntax:",
-        "text" : "expression1 || expression2"
-      },
-      {
-        "type" : "Rule:",
-        "text" : "If expression1 is truthy, return expression1. Otherwise, return expression2."
-      },
-      {
-        "type" : "Example:",
-        "text" : "const result = false || 'Hello'; //'Hello'"
-      },
-      {
-        "text" : "const result = true || 'World'; //true"
-      },
-      {
-        "type" : "• Logical AND (&&):"
-      },
-      {
-        "type" : "Syntax:",
-        "text" : "expression1 && expression2"
-      },
-      {
-        "type" : "Rule:",
-        "text" : "If expression1 is falsy, return expression1. Otherwise, return expression2."
-      },
-      {
-        "type" : "Example:",
-        "text" : "const result = true && 'Hello'; //'Hello'"
-      },
-      {
-        "text" : "const result = false && 'World'; //false"
-      },
-      {
-        "type" : "• Nullish Coalescing (??):"
-      },
-      {
-        "type" : "Syntax:",
-        "text" : "expression1 ?? expression2"
-      },
-      {
-        "type" : "Rule:",
-        "text" : "If expression1 is not null or undefined, return expression1. Otherwise, return expression2."
-      },
-      {
-        "type" : "Example:",
-        "text" : "const result = null ?? 'Hello'; //'Hello'"
-      },
-      {
-        "text" : "const result = undefined ?? 'World'; //'World'"
-      },
-      {
-        "text" : "const result = '' ?? 'Fallback'; //''"
+        "type": "2. ",
+        "text": "Keys must not change."
       }
     ]
   },
   {
-    "title" : "List of React Hooks",
-    "content" : [
+    "title": "Short Circuit Evaluation in React.js",
+    "content": [
       {
-        "type" : "",
-        "text" : "useState, useEffect, useContext, useReducer, useCallback, useMemo, useRef, useLayoutEffect, useDebugValue, useImperativeHandle"
+        "type": "",
+        "text": " Short circuit evaluation is a technique used in JavaScript (and many other programming languages) where expressions are evaluated from left to right. In logical operations, evaluation stops as soon as the result is determined. This is often used in React to conditionally render components or execute code based on the truthiness of certain conditions."
+      },
+      {
+        "type": "Rules of Short Circuit Evaluation:",
+        "text": ""
+      },
+      {
+        "type": "",
+        "text": "Short circuit evaluation involves logical operators (&&, ||, ??) and how they evaluate expressions based on the truthiness of their operands."
+      },
+      {
+        "type": "• Logical OR (||):"
+      },
+      {
+        "type": "Syntax:",
+        "text": "expression1 || expression2"
+      },
+      {
+        "type": "Rule:",
+        "text": "If expression1 is truthy, return expression1. Otherwise, return expression2."
+      },
+      {
+        "type": "Example:",
+        "text": "const result = false || 'Hello'; //'Hello'"
+      },
+      {
+        "text": "const result = true || 'World'; //true"
+      },
+      {
+        "type": "• Logical AND (&&):"
+      },
+      {
+        "type": "Syntax:",
+        "text": "expression1 && expression2"
+      },
+      {
+        "type": "Rule:",
+        "text": "If expression1 is falsy, return expression1. Otherwise, return expression2."
+      },
+      {
+        "type": "Example:",
+        "text": "const result = true && 'Hello'; //'Hello'"
+      },
+      {
+        "text": "const result = false && 'World'; //false"
+      },
+      {
+        "type": "• Nullish Coalescing (??):"
+      },
+      {
+        "type": "Syntax:",
+        "text": "expression1 ?? expression2"
+      },
+      {
+        "type": "Rule:",
+        "text": "If expression1 is not null or undefined, return expression1. Otherwise, return expression2."
+      },
+      {
+        "type": "Example:",
+        "text": "const result = null ?? 'Hello'; //'Hello'"
+      },
+      {
+        "text": "const result = undefined ?? 'World'; //'World'"
+      },
+      {
+        "text": "const result = '' ?? 'Fallback'; //''"
       }
     ]
   },
   {
-    "title" : "React Hooks Rules",
+    "title": "List of React Hooks",
+    "content": [
+      {
+        "type": "",
+        "text": "useState, useEffect, useContext, useReducer, useCallback, useMemo, useRef, useLayoutEffect, useDebugValue, useImperativeHandle"
+      }
+    ]
+  },
+  {
+    "title": "React Hooks Rules",
+    "content": [
+      {
+        "type": "•",
+        "text": "Hooks let you use different React features from your components."
+      },
+      {
+        "type": "•",
+        "text": "It starts with use___. (useState, useEffect, useReducer)"
+      },
+      {
+        "type": "•",
+        "text": "Hooks can only be used on the top level of your component."
+      },
+      {
+        "type": "•",
+        "text": "Do not call Hooks inside loops, conditions or nested functions."
+      },
+      {
+        "type": "•",
+        "text": "Call Hooks only from React function components or custom Hook. Do not call Hooks from regular JavaScript functions or Class components."
+      },
+      {
+        "type": "•",
+        "text": "You cab also create your own custom Hooks by creating functions starting with use____ this ensures that React can identify it as Hook. (ex. useFetch, useForm)"
+      },
+      {
+        "type": "•",
+        "text": "Ensure Hooks are called in the same order."
+      }
+    ]
+  },
+  {
+    "title": "useState Hooks in React",
+    "content": [
+      {
+        "type": "•",
+        "text": "The useState hook is a fundamental hook in React that allows you to add state management to your functional components. It lets you store and update values that change over time, enabling dynamic and interactive user interfaces."
+      },
+      {
+        "type": "•",
+        "text": "const [count, setCount] = useState(0);"
+      },
+      {
+        "type": "Rules:"
+      },
+      {
+        "type": "•",
+        "text": "Functions passed to useState() and setState() runs twice during development mode to prevent developers from running side effects."
+      },
+      {
+        "type": "•",
+        "text": "Side effects in programming refer to changes or interactions that occur outside the scope of a function or block of code."
+      },
+      {
+        "type": "•",
+        "text": "React.is compares previous state and new state using Object.is(), if it finds both are same then it will ignore re-rendering."
+      },
+      {
+        "type": "•",
+        "text": "React.js batches all setStates() inside the event handler or run them at the same time. If you try to access the value immediately after setting state, then you will get the old value as it is asynchronous."
+      }
+    ]
+  },
+  {
+    "title": "Controlled Components",
+    "content": [
+      {
+        "type": "",
+        "text": "Controlled components in React are those where form data is handled by React component state."
+      },
+      {
+        "type": "This means:"
+      },
+      {
+        "type": "• State Management:",
+        "text": "The value of the input field is controlled by React state (useState or this.state in class components)."
+      },
+      {
+        "type": "• Event Handlers:",
+        "text": "Changes to the input field (like typing into a text field) are handled by React event handlers (onChange, onBlur, etc.)."
+      },
+      {
+        "type": "• State Updates:",
+        "text": "When the user interacts with the form input, React state is updated through event handlers, and the input value reflects the current state value."
+      },
+      {
+        "type": "Pros:"
+      },
+      {
+        "type": "•",
+        "text": "React has complete control over the input values, making it straightforward to implement features like validation and conditional formatting based on state."
+      },
+      {
+        "type": "•",
+        "text": "Easier to handle form submission and integration with React's lifecycle methods."
+      },
+      {
+        "type": "•",
+        "text": "Enables clear data flow and centralized state management within React components."
+      },
+      {
+        "type": "Cons:"
+      },
+      {
+        "type": "•",
+        "text": "Requires more code to uncontrolled components due to state management."
+      },
+      {
+        "type": "•",
+        "text": "Can lead to more re-renders if not optimized, although React handles this efficiently in these cases."
+      }
+    ]
+  },
+  {
+    "title": "Uncontrolled Components",
+    "content": [
+      {
+        "text": "Uncontrolled components in React are those where form data is handled by the DOM itself."
+      },
+      {
+        "type": "This means:"
+      },
+      {
+        "type": "• Direct DOM Manipulation:",
+        "text": "The value of the input field is controlled by the DOM (document.getElementByld, etc.). It's not declarative way"
+      },
+      {
+        "type" : "• Event Handling:",
+        "text" : "Changes are directly handled by DOM events (onchange, onblur, etc.)."
+      },
+      {
+        "type" : "• Accessing Form Data:",
+        "text" : "Form data is accessed through refs or DOM traversal methods, not through React state."
+      }
+    ]
+  },
+  {
+    "title" : "useEffect Hook",
+    "content" : [
+      {
+        "text" : "The useEffect Hook in React is use to handle side effects of functional components."
+      },
+      {
+        "type": "Syntax:"
+      },
+      {
+        "text" : "useEffect(() => {"
+      },
+      {
+        "text" : "//Your side effect code here"
+      },
+      {
+        "text" : "return () => {"
+      },
+      {
+        "text" : "//Cleanup code here (Optional)"
+      },
+      {
+        "text" : "};"
+      },
+      {
+        "text": "}, [Array Dependencies]);"
+      },
+      {
+        "type" : "• Initial Render:",
+        "text" : "When the component mounts or runs first time, useEffect can run its effect function to perform operations like data fetching."
+      },
+      {
+        "type" : "• Dependencies:",
+        "text" : "The second argument, an array of dependencies, which determines when the effect should re-run. If any value in the array changes, the component will re-render and effect will also re-render."
+      },
+      {
+        "type" : "• Cleanup:",
+        "text" : "useEffect can return a cleanup function to clean up after the effect, such as unsubscribing from an event or clearing a timer."
+      },
+      {
+        "text" : "A side effect is any operation that affects something outside the scope of function (Pure Function). In React, side effects are managed using hooks like useEffect to ensure they are handled in a controlled and predictable manner."
+      },
+      {
+        "type" : "Example:"
+      },
+      {
+        "text" : "let count = 0;"
+      },
+      {
+        "text" : "function increment() {"
+      },
+      {
+        "text" : "count +=1;  //Modifies an external variable"
+      },
+      {
+        "text" : "}"
+      },
+      {
+        "text" : "increment();"
+      },
+      {
+        "text" : "console.log(count); //Output: 1"
+      },
+      {
+        "type" : "Fetching Data as side effect:"
+      },
+      {
+        "text" : "When you fetch data from in a React component, you are performing side effect because:"
+      },
+      {
+        "type" : "• External Interaction:",
+        "text" : "You are interacting with an external data source, such as API or server."
+      },
+      {
+        "type" : "• State Updates:",
+        "text" : "The fetched data will usually update the component's state, causing re-render."
+      },
+      {
+        "type" : "Example:"
+      },
+      {
+        "type" : "•",
+        "text" : "Subscribing to or unsubscribing from a service."
+      },
+      {
+        "type" : "•",
+        "text" : "Updating the browser's DOM."
+      },
+      {
+        "type" : "•",
+        "text" : "Logging data to the console."
+      }
+    ]
+  },
+  {
+    "title" : "useRef() State",
     "content" : [
       {
         "type" : "•",
-        "text" : "Hooks let you use different React features from your components."
+        "text" : "useRef is a React Hook that lets you reference a value that's not needed for rendering."
       },
       {
         "type" : "•",
-        "text" : "It starts with use___. (useState, useEffect, useReducer)"
+        "text" : "Unlike states, it's directly mutable."
       },
       {
         "type" : "•",
-        "text" : "Hooks can only be used on the top level of your component."
+        "text" : "You can access value of it's using yourRef.current;"
+      },
+      {
+        "type" : "Uncontrolled Components:"
       },
       {
         "type" : "•",
-        "text" : "Do not call Hooks inside loops, conditions or nested functions."
-      },
-      {
-        "type" : "•",
-        "text" : "Call Hooks only from React function components or custom Hook. Do not call Hooks from regular JavaScript functions or Class components."
-      },
-      {
-        "type" : "•",
-        "text" : "You cab also create your own custom Hooks by creating functions starting with use____ this ensures that React can identify it as Hook. (ex. useFetch, useForm)"
-      },
-      {
-        "type" : "•",
-        "text" : "Ensure Hooks are called in the same order."
+        "text" : "Uncontrolled components manage their own state internally and are typically used with refs."
       }
     ]
   }
