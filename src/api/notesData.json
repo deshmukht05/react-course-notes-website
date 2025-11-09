@@ -1140,5 +1140,187 @@
         "text" : "Uncontrolled components manage their own state internally and are typically used with refs."
       }
     ]
+  },
+  {
+    "title" : "useId() State",
+    "content" : [
+      {
+        "text": "useId is React Hook for generating unique ID's that can be passed to accessibility attributes. It helps to ensure that each instance of a component gets a unique ID, which is useful for associating labels with input fields and other elements."
+      },
+      {
+        "type" : "Syntax:",
+        "text" : "const id = useId();"
+      },
+      {
+        "type" : "• Parameters:",
+        "text" : "useId does not take any parameters."
+      },
+      {
+        "type" : "• Returns:",
+        "text" : "useId returns a unique ID string associated with this particular useId call in this particular component."
+      },
+      {
+        "type" : "Note:",
+        "text" : "useId should not be used to generate keys in a list."
+      }
+    ]
+  },
+  {
+    "title" : "Prop Drilling in React JS",
+    "content" : [
+      {
+        "type" : "•",
+        "text" : "Prop drilling is a pattern in React where you can pass data from parent component to deeply nested child components through multiple layers of components, even if some of the intermediate components don't need the data."
+      },
+      {
+        "type" : "•",
+        "text" : "As your component tree deepens, prop drilling can make the code more complex and harder to maintain."
+      },
+      {
+        "type" : "Concluding Prop Drilling:"
+      },
+      {
+        "type" : "•",
+        "text" : "Passing upto 1 to 2 levels in probably fine but might be harder to maintain more than that."
+      },
+      {
+        "type" : "•",
+        "text" : "When a prop needs to be passed through many levels, making changes to the component hierarchy or adding/removing props can become cumbersome."
+      },
+      {
+        "type" : "•",
+        "text" : "Prop drilling may result in boilerplate code as each intermediate component needs to accept and pass down the props even if it doesn't use them."
+      }
+    ]
+  },
+  {
+    "title" : "Context API",
+    "content" : [
+      {
+        "text" : "A way to pass the data through component tree without having to pass props down manually at entry level."
+      },
+      {
+        "type" : "• createContext:",
+        "text" : "Creates a context object."
+      },
+      {
+        "type" : "• Provider:",
+        "text" : "A component that provides a context value to its children."
+      },
+      {
+        "type" : "• useContext:",
+        "text" : "A Hook that allows you to consume a context."
+      }
+    ]
+  },
+  {
+    "title" : "Rule for Custom Hooks",
+    "content" : [
+      {
+        "text" : "Creating custom hooks in React is a powerful way to encapsulate logic and make your components cleaner and more maintainable."
+      },
+      {
+        "type" : "• Prefix with use:",
+        "text" : "Custom hooks must start with the word use. This convention ensures that hooks are easily identifiable and adhere to the hook rules."
+      },
+      {
+        "type" : "• Use built-in Hooks:",
+        "text" : "Custom hooks should utilize Reacts built-in hooks (e.g., useState, useEffect, useContext) to leverage React state and lifecycle features."
+      },
+      {
+        "type" : "• Avoid side effects outside Hooks:",
+        "text" : "Side effects (e.g., data fetching, subscriptions) should be managed within Hooks using useEffect or other appropriate Hooks."
+      },
+      {
+        "type" : "• Keep Hooks Pure:",
+        "text" : "Hooks should be free from side effects and return values or functions that the component can use."
+      }
+    ]
+  },
+  {
+    "title" : "usReducer() Hook",
+    "content" : [
+      {
+        "type" : "Syntax:",
+        "text" : "const [state, dispatch] = useReducer(reducer, initalState);"
+      },
+      {
+        "type" : "•",
+        "text" : "It returns an array containing the current state and dispatch function."
+      },
+      {
+        "type" : "• Dispatch function:",
+        "text" : "It is used to send action to reducer, which in turn updates the state based on the action's type and associated data (payload)."
+      },
+      {
+        "type" : "• Reducer function:",
+        "text" : "It is a function that takes the current state and an action as arguments, and returns a new state."
+      },
+      {
+        "type" : "• Initial State:",
+        "text" : "The initial state value. (The initial state value can be simple value, an object, or even derived from a function if the initialization is complex)"
+      }
+    ]
+  },
+  {
+    "title" : "React.memo()",
+    "content" : [
+      {
+        "type" : "•",
+        "text" : "The React.memo() function is used for memoization of functional components."
+      },
+      {
+        "type" : "•",
+        "text" : "If the props of a memoized component have not changed, React skips the rendering for that component, using the cached result instead."
+      },
+      {
+        "type" : "•",
+        "text" : "Do memoizations when necessary."
+      },
+      {
+        "type" : "OR"
+      },
+      {
+        "type" : "•",
+        "text" : "React.memo() is a higher-order component that we can to wrap components that we do-not want to re-render unless props within them changes."
+      }
+    ]
+  },
+  {
+    "title" : "useMemo() Hook",
+    "content" : [
+      {
+        "type" : "Syntax:"
+      },
+      {
+        "text" : "const memoizedValue = useMemo(() => {"
+      },
+      {
+        "text" : "return computedValue;"
+      },
+      {
+        "text" : "}, [dependencies]);"
+      },
+      {
+        "type" : "•",
+        "text" : "useMemo is a React Hook used in memoization."
+      },
+      {
+        "type" : "•",
+        "text" : "Memoization is a technique use to optimize performance by cashing the result of expensive function calls."
+      },
+      {
+        "type" : "•",
+        "text" : "Use it when you want to prevent unnecessary re-execution of a function on every render."
+      },
+      {
+        "type" : "•",
+        "text" : "Useful for optimizing performance in situations where calculations or operations are computationally expensive."
+      },
+      {
+        "type" : "•",
+        "text" : "Overusing useMemo might lead to unnecessary complexity and impact readability."
+      }
+    ]
   }
 ]
